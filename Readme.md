@@ -183,3 +183,24 @@ let firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 ```
+
+### Firebase Data Model
+
+![alt Firebase](https://firebase.google.com/docs/firestore/images/structure-data.png)
+
+#### Documents
+In Cloud Firestore, the unit of storage is the document. A document is a lightweight record that contains fields, which map to values. Each document is identified by a name.
+
+A document representing a user alovelace might look like this:
+
+```javascript
+first : "Ada"
+last : "Lovelace"
+born : 1815
+```
+
+#### Collections
+
+Documents live in collections, which are simply containers for documents. For example, you could have a users collection to contain your various users, each represented by a document
+
+Read more: [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore/data-model)
